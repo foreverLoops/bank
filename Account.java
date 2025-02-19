@@ -35,6 +35,19 @@ public class Account {
         if (amount > 0 && amount <= balance) {
             this.withdraw(amount);
             recipient.deposit(amount);
+            System.out.println("Transferred R" + amount + " to " + recipient.accountNumber);
+        } else {
+            System.out.println("Transfer failed. Check balance or amount.");
         };
+    };
+
+    // Getter to check balance
+    public double getBalance() {
+        return balance;
+    };
+
+    // Getter to check account number
+    public String getAccountNumber(){
+        return accountNumber;
     };
 }
